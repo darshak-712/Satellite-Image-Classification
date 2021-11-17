@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="{{ url_for ('static', filename = 'css/bootstrap.min.css') }}" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="{{ url_for ('static', filename = 'css/bootstrap.css') }}" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for ('static', filename = 'css/bootstrap-grid.min.css') }}" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for ('static', filename = 'css/bootstrap-reboot.min.css') }}" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="C:\Users\HP\Desktop\flask-login-register-form-master\css\style.css">
+    <title>Home</title>
+  </head>
+  <body class="text-white" style="background-image: url('{{ url_for('static', filename = '1.jpg') }}'); background-size: cover; background-repeat: no-repeat;">
+  <style type="text/css">
+
+.sidecenter{
+  position: absolute;
+  top: 194px;
+  left: 213px;
+  
+}
+
+
+  </style>
+    <div class="container">
+      <nav class=" text-white navbar transparent navbar-inverse navbar-expand-md navbar-dark  bg-transparent">
+            <div class="navbar-inner">
+                <a class="navbar-brand" href="{{ url_for('index') }}"><img src="{{ url_for ('static', filename = 'download.png' ) }}" style="width: 150px;"></a>
+            </div>
+        
+        
+        <div class="navbar-collapse navbar-inner collapse w-100 order-3 dual-collapse2">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item ">
+                    <a class="nav-link" href="{{ url_for('index') }}" style="color:white">Home</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="{{ url_for('about') }}" style="color:white">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('contact') }}" style="color: white";>Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div>
+      <div>
+        <p class="text-center text-justify h3 pt-3">Charotar University Of Science and Technology</p>
+        <p class="text-center text-justify h4 pt-3">Satellite Image Classification</p>
+      </div>
+    </div>
+    
+    <div>
+      <div class="row pt-5">
+        <div class="col-sm-6">
+          <center>
+          <div class="card bg-transparent text-center">
+            <div class="card-body">
+              <h5 class="card-title ">Zonal Classification</h5>
+              <!-- <p class="card-text ">Upload your image here.</p> -->
+              <form action="{{ url_for('input') }}" method="POST" role="form" enctype="multipart/form-data">
+                <div class="form-group" >
+                  <label for="exampleFormControlFile1">Upload your image here.</label>
+                  <center><input type="file" class="form-control-file" id="exampleFormControlFile1" name="filename" style="border: white solid 2px; width: 70%;"></center>
+                </div>
+                <div class="form-group">
+                  <img id="show_image" width="200">
+                </div>
+                <div>
+                  {% for i in val %}
+                  <img src="{{ url_for('output', filename = i ) }}">
+                  {% endfor %}
+                  <h3 id="classes">
+                    <span> {{ label }}</span>
+                  </h3>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+          </div>
+          </center>
+        </div>
+      </div>    
+    </div>
+  </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename = 'js/bootstrap.min.js') }}"  crossorigin="anonymous"></script>
+
+    <script>
+      function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            
+            reader.onload = function (e) {
+                $('#show_image').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+    $("#exampleFormControlFile1").change(function(){
+        readURL(this);
+    });
+    </script>
+  </body>
+</html>

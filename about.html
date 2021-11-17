@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for ('static', filename = 'css/bootstrap.min.css') }}" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for ('static', filename = 'css/bootstrap-grid.min.css') }}" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for ('static', filename = 'css/bootstrap-reboot.min.css') }}" crossorigin="anonymous">
+
+    <title>About Us</title>
+  </head>
+  <body class="text-white" style="background-image: url('{{ url_for('static', filename = '1.jpg') }}') ;background-size: cover;">
+  	<div class="container">
+    <nav class="navbar transparent navbar-inverse navbar-expand-md navbar-dark  bg-transparent">
+      <div class="navbar-inner"> 
+       <a class="navbar-brand" href="{{ url_for('index') }}"><img src="{{ url_for ('static', filename = 'download.png' ) }}" style="width: 150px;"></a>
+      </div>
+      <div class="navbar-collapse navbar-inner collapse w-100 order-3 dual-collapse2">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('index') }}" style="color: white";>Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('about') }}" style="color: white";>About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('contact') }}" style="color: white";>Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="row bg" style="position: relative;">
+      <img class="img-fluid " src="{{ url_for ('static', filename = 'charusat1.jpg' ) }}" >
+      <p class="text-justify display-4 pl-5 pt-5 top-right" style="position: absolute; font-family: Georgia;">About CHARUSAT</p>
+    </div>
+    <div class="pt-5" style="font-size: 20px;">
+      <p class="text-justify text-center">Charotar University of Science and Technology (CHARUSAT) is established under the Gujarat Act No. 8 of 1995, Government of Gujarat. University Grants Commission (UGC) has empowered CHARUSAT to award Degrees under Section 22 of UGC Act 1956.Earlier campus was known as Education Campus Changa until 2009. CHARUSAT was accredited with grade A by NAAC in 2016.</p>
+      <p class="text-justify text-center">The Iron Man of India, Sardar Vallabhbhai Patel believed, “Education without character is futile”. CHARUSAT proudly follows this spirit. It also follows founding High Moral Values like Honesty, Integrity, Transparency, Fairness, Equity, and Accountability.</p>
+      <p class="text-justify text-center">CHARUSAT offers various programs, viz., UG, PG, Doctoral, Post-Doctoral, Diploma, Value-added and Executive Development Programs under the tutelage of 9 Institutes, 6 Faculties, and various Centers / Cells. An employee strength of 600, student strength of more than 8000 and a Capital Outlay of INR 150 Crores are the scalar dimensions of CHARUSAT. The programs are offered in the allied disciplines of Technology & Engineering, Pharmacy, Computer Applications, Management Studies, Applied Sciences, Nursing, Physiotherapy, and other Paramedical Sciences.</p>
+      <p class="text-justify text-center">
+    </div>
+    
+      </div>
+    </div>
+    </div>
+      
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename = 'js/bootstrap.min.js') }}" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

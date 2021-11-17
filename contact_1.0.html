@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for ('static', filename = 'css/bootstrap.min.css') }}" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for ('static', filename = 'css/bootstrap-grid.min.css') }}" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for ('static', filename = 'css/bootstrap-reboot.min.css') }}" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Contact Us</title>
+  </head>
+
+
+  <body class="text-white" style="background-image: url('{{ url_for('static', filename = '1.jpg') }}');background-size: cover;" >
+  <style type="text/css">
+    .borderless div, .borderless {
+    border: none;
+  }
+  
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+  padding: 20px;
+  font-size: 30px;
+  width: 70px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+  padding: 20px;
+  font-size: 30px;
+  width: 70px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+.fa:hover {
+    opacity: 0.4;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+  padding: 20px;
+  font-size: 30px;
+  width: 70px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+.map-responsive iframe{
+
+    left:0;
+
+    top:0;
+
+    height:100%;
+
+    width:100%;
+
+    position:absolute;
+
+}
+  </style>
+  <div class="container">
+  <nav class="navbar transparent navbar-inverse navbar-expand-md navbar-dark  bg-transparent">
+      <div class="navbar-inner"> 
+       <a class="navbar-brand" href="{{ url_for('index') }}"><img src="{{ url_for ('static', filename = 'download.png' ) }}" style="width: 150px;"></a>
+      </div>
+      <div class="navbar-collapse navbar-inner collapse w-100 order-3 dual-collapse2">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('index') }}" style="color: white";>Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('about') }}" style="color: white";>About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('contact') }}" style="color: {{ url_for('contact') }}white";>Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- <div class="container"> -->
+      <div class="contact-info text-center bg-transparent">
+            <h1 class="title text-white text-uppercase font-weight-bold pt-5 display-4">get in touch</h1>
+      </div>
+        <div class="card-group borderless pt-3">
+          <div class="card bg-transparent text-center">
+            <div class="card-body ">
+
+              <h5 class="card-title"><i class='fa fa-map-marker' style='font-size:70px;color:white'></i></h5>
+              <p class="card-text">139, CHARUSAT Campus, Highway, Off, Nadiad - Petlad Rd, Changa, Gujarat 388421</p>
+               </div>
+          </div>
+          <div class="card bg-transparent text-center">
+            <div class="card-body">
+              <h5 class="card-title"><i style="font-size:70px;color:white" class="fa fa fa-phone"></i></h5>
+              <p class="card-text">02697 265 011<br>
+
+             
+            </div>
+          </div>
+          <div class="card bg-transparent text-center">
+            
+            <div class="card-body">
+              <h5 class="card-title"><i style="font-size:70px;color:white" class="fa fa fa-at"></i></h5>
+              <p class="card-text text-center" style="font-size: 20px;">www.charusat.ac.in</p>
+            </div>
+          </div>
+          
+
+        </div>
+        
+      </div>
+      
+</div>
+
+
+    <!-- </div> -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename = 'js/bootstrap.min.js') }}" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script> -->
+  </body>
+</html>
